@@ -1,0 +1,87 @@
+export const skillCategories = [
+  {
+    id: "frontend",
+    label: "Frontend",
+    color: "#4F8EF7",
+    skills: [
+      { name: "React", level: 70 },
+      { name: "Next.js", level: 82 },
+      { name: "TypeScript", level: 82 },
+      { name: "Tailwind CSS", level: 97 },
+      { name: "Framer Motion", level: 88 },
+      { name: "React Native", level: 80 },
+      { name: "Expo", level: 80 },
+      { name: "HTML/CSS", level: 99 },
+    ],
+  },
+  {
+    id: "backend",
+    label: "Backend",
+    color: "#10B981",
+    skills: [
+      { name: "Node.js", level: 82 },
+      { name: "REST APIs", level: 92 },
+      { name: "Django", level: 95 },
+      { name: "FastAPI", level: 85 },
+      { name: "Authentication", level: 88 },
+      { name: "PostgreSQL", level: 85 },
+      { name: "Redis", level: 72 },
+      { name: "FFmpeg", level: 78 },
+      { name: "WebSockets", level: 75 },
+    ],
+  },
+  {
+    id: "cloud",
+    label: "Cloud & DevOps",
+    color: "#F59E0B",
+    skills: [
+      { name: "AWS S3", level: 85 },
+      { name: "AWS EC2", level: 72 },
+      { name: "Docker", level: 78 },
+      { name: "CI/CD", level: 75 },
+      { name: "Vercel", level: 90 },
+      { name: "Git", level: 95 },
+      { name: "Linux", level: 50 },
+      { name: "Nginx", level: 50 },
+    ],
+  },
+  {
+    id: "product",
+    label: "Product & Design",
+    color: "#7C3AED",
+    skills: [
+      { name: "Product Strategy", level: 85 },
+      { name: "UI/UX Design", level: 82 },
+      { name: "Figma", level: 80 },
+      { name: "User Research", level: 75 },
+      { name: "System Design", level: 85 },
+      { name: "Architecture", level: 83 },
+      { name: "Technical Writing", level: 88 },
+      { name: "Agile", level: 80 },
+    ],
+  },
+];
+
+export const techStack = [
+  { name: "React", icon: "⚛️" },
+  { name: "Next.js", icon: "▲" },
+  { name: "Node.js", icon: "🟢" },
+  { name: "Django", icon: "🎸" },
+  { name: "FastAPI", icon: "⚡" },
+  { name: "PostgreSQL", icon: "🐘" },
+  { name: "TypeScript", icon: "🔷" },
+  { name: "Tailwind", icon: "🎨" },
+  { name: "AWS", icon: "☁️" },
+  { name: "Docker", icon: "🐳" },
+  { name: "FFmpeg", icon: "🎬" },
+  { name: "Redis", icon: "🔴" },
+  { name: "Git", icon: "📦" },
+  { name: "Figma", icon: "🖌️" },
+];
+
+export const stats = [
+  { value: 6, suffix: "+", label: "Products Built" },
+  { value: 3, suffix: "+", label: "Years Experience" },
+  { value: 100, suffix: "K+", label: "Lines of Code" },
+  { value: 2, suffix: "", label: "Startup Founded" },
+];
