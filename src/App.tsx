@@ -7,6 +7,7 @@ import Navigation from "./components/Navigation";
 import CommandPalette from "./components/CommandPalette";
 import AppRoutes from "./routes/AppRoutes";
 import { ThemeProvider } from "./components/theme-provider";
+import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
   return (
     <ThemeProvider>
     <BrowserRouter>
+    <ScrollToTop />
       <Navigation
         onCommandPalette={() => setIsCommandPaletteOpen(true)}
       />
@@ -45,3 +47,5 @@ function App() {
 }
 
 export default App;
+
+

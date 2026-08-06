@@ -1,32 +1,34 @@
 "use client";
 import { Mail, ArrowUpRight } from "lucide-react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa6";
+import { Link, useLocation } from "react-router-dom";
+
 
 const footerLinks = {
   Navigation: [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Projects", href: "/projects" },
-    { label: "Services", href: "/services" },
+    { label: "Home", to: "/" },
+    { label: "About", to: "/about" },
+    { label: "Projects", to: "/projects" },
+    { label: "Services", to: "/services" },
   ],
   Platform: [
-    { label: "GoPremiere", href: "/gopremiere" },
-    { label: "Blog", href: "/blog" },
-    { label: "Resume", href: "/resume" },
-    { label: "Contact", href: "/contact" },
+    { label: "GoPremiere", to: "/gopremiere" },
+    { label: "Blog", to: "/blog" },
+    { label: "Resume", to: "/resume" },
+    { label: "Contact", to: "/contact" },
   ],
   Legal: [
-    { label: "Privacy Policy", href: "/privacy" },
-    { label: "Terms of Service", href: "/terms" },
-    { label: "Sitemap", href: "/sitemap.xml" },
+    { label: "Privacy Policy", to: "/privacy" },
+    { label: "Terms of Service", to: "/terms" },
+    { label: "Sitemap", to: "/sitemap.xml" },
   ],
 };
 
 const socials = [
-  { icon: FaGithub, href: "https://github.com/DaveTech683", label: "GitHub" },
-  { icon: FaLinkedin, href: "https://www.linkedin.com/in/abiola-david-2b5319252", label: "LinkedIn" },
-  { icon: FaTwitter, href: "https://x.com/The_Biola_David", label: "Twitter" },
-  { icon: Mail, href: "mailto:abiolad267@gmail.com", label: "Email" },
+  { icon: FaGithub, to: "https://github.com/DaveTech683", label: "GitHub" },
+  { icon: FaLinkedin, to: "https://www.linkedin.com/in/abiola-david-2b5319252", label: "LinkedIn" },
+  { icon: FaTwitter, to: "https://x.com/The_Biola_David", label: "Twitter" },
+  { icon: Mail, to: "mailto:abiolad267@gmail.com", label: "Email" },
 ];
 
 export default function Footer() {
@@ -83,8 +85,8 @@ export default function Footer() {
           partnerships.
         </p>
         <div className="flex items-center justify-center gap-4 relative z-10 flex-wrap">
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-200"
             style={{
               background: "linear-gradient(135deg, #4F8EF7, #7C3AED)",
@@ -101,9 +103,9 @@ export default function Footer() {
             }}
           >
             Get in touch <ArrowUpRight size={16} />
-          </a>
-          <a
-            href="mailto:abiolad267@gmail.com"
+          </Link>
+          <Link
+            to="mailto:abiolad267@gmail.com"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-200"
             style={{
               border: "1px solid rgba(255,255,255,0.12)",
@@ -120,7 +122,7 @@ export default function Footer() {
             }}
           >
             <Mail size={16} /> abiolad267@gmail.com
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -148,10 +150,10 @@ export default function Footer() {
               that matter.
             </p>
             <div className="flex items-center gap-3">
-              {socials.map(({ icon: Icon, href, label }) => (
-                <a
+              {socials.map(({ icon: Icon, to, label }) => (
+                <Link
                   key={label}
-                  href={href}
+                  to={to}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
@@ -176,7 +178,7 @@ export default function Footer() {
                   }}
                 >
                   <Icon size={14} />
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -193,8 +195,8 @@ export default function Footer() {
               <ul className="space-y-2">
                 {links.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
+                    <Link
+                      to={link.to}
                       className="text-sm transition-colors duration-150"
                       style={{ color: "rgba(255,255,255,0.45)" }}
                       onMouseEnter={(e) => {
@@ -205,7 +207,7 @@ export default function Footer() {
                       }}
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
