@@ -356,7 +356,7 @@ export default function BlogPage() {
             <p className="text-sm" style={{ color: "rgba(255,255,255,0.4)" }}>
               Articles are being written. Check back soon — or follow on{" "}
               <a
-                href="https://twitter.com"
+                href="https://x.com/The_Biola_David"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "#4F8EF7" }}

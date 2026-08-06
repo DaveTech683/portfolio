@@ -80,9 +80,9 @@ const commands = [
   {
     id: "email",
     label: "Send Email",
-    description: "hello@example.com",
+    description: "abiolad267@gmail.com",
     icon: Mail,
-    href: "mailto:hello@example.com",
+    href: "mailto:abiolad267@gmail.com",
     group: "Quick Actions",
   },
   {
@@ -90,7 +90,7 @@ const commands = [
     label: "GitHub",
     description: "See my code",
     icon: Code,
-    href: "https://github.com",
+    href: "https://github.com/DaveTech683",
     group: "Quick Actions",
   },
   {
@@ -98,7 +98,7 @@ const commands = [
     label: "LinkedIn",
     description: "Professional network",
     icon: User,
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/abiola-david-2b5319252",
     group: "Quick Actions",
   },
 ];

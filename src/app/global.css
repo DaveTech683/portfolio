@@ -1,17 +1,42 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
-  input,
-  textarea,
-  select,
-  button {
-    outline: none;
+  :root {
+    --color-bg: #FFFFFF;
+    --color-surface: #F4F5F7;
+    --color-surface-hover: #EAEBEE;
+    --color-border: #E2E4E8;
+    --color-border-strong: #C9CCD3;
+    --color-text-hi: #14171C;
+    --color-text-mid: #565D6B;
+    --color-text-low: #8A909B;
+    --color-accent: #3D6591;
+    --color-accent-dim: rgba(61, 101, 145, 0.08);
+    --color-warm: #8C6F45;
+    --color-nav-overlay: rgba(255, 255, 255, 0.85);
+    --color-nav-overlay-strong: rgba(255, 255, 255, 0.96);
+    --color-nav-border: rgba(20, 23, 28, 0.06);
   }
 
-  input:focus,
-  textarea:focus,
-  select:focus,
-  button:focus {
-    outline: none;
+  .dark {
+    --color-bg: #000000;
+    --color-surface: #141821;
+    --color-surface-hover: #171C24;
+    --color-border: #232A34;
+    --color-border-strong: #333C49;
+    --color-text-hi: #EDEFF2;
+    --color-text-mid: #9CA5B3;
+    --color-text-low: #5B6472;
+    --color-accent: #7C98B8;
+    --color-accent-dim: rgba(124, 152, 184, 0.10);
+    --color-warm: #C9AE8C;
+    --color-nav-overlay: rgba(11, 13, 18, 0.85);
+    --color-nav-overlay-strong: rgba(11, 13, 18, 0.96);
+    --color-nav-border: rgba(255, 255, 255, 0.06);
   }
+
+  input, textarea, select, button { outline: none; }
+  input:focus, textarea:focus, select:focus, button:focus { outline: none; }
 }

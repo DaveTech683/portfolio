@@ -1,9 +1,13 @@
+// app.tsx
+
 import { BrowserRouter } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import Navigation from "./components/Navigation";
 import CommandPalette from "./components/CommandPalette";
 import AppRoutes from "./routes/AppRoutes";
+import { ThemeProvider } from "./components/theme-provider";
+import Footer from "./components/Footer";
 
 function App() {
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
@@ -22,6 +26,7 @@ function App() {
   }, []);
 
   return (
+    <ThemeProvider>
     <BrowserRouter>
       <Navigation
         onCommandPalette={() => setIsCommandPaletteOpen(true)}
@@ -33,7 +38,9 @@ function App() {
       />
 
       <AppRoutes />
+      <Footer />
     </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

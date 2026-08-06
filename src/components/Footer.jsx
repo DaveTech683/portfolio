@@ -1,5 +1,6 @@
 "use client";
-import { Github, Linkedin, Mail, Twitter, ArrowUpRight } from "lucide-react";
+import { Mail, ArrowUpRight } from "lucide-react";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa6";
 
 const footerLinks = {
   Navigation: [
@@ -22,10 +23,10 @@ const footerLinks = {
 };
 
 const socials = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: Mail, href: "mailto:hello@example.com", label: "Email" },
+  { icon: FaGithub, href: "https://github.com/DaveTech683", label: "GitHub" },
+  { icon: FaLinkedin, href: "https://www.linkedin.com/in/abiola-david-2b5319252", label: "LinkedIn" },
+  { icon: FaTwitter, href: "https://x.com/The_Biola_David", label: "Twitter" },
+  { icon: Mail, href: "mailto:abiolad267@gmail.com", label: "Email" },
 ];
 
 export default function Footer() {
@@ -102,7 +103,7 @@ export default function Footer() {
             Get in touch <ArrowUpRight size={16} />
           </a>
           <a
-            href="mailto:hello@example.com"
+            href="mailto:abiolad267@gmail.com"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-200"
             style={{
               border: "1px solid rgba(255,255,255,0.12)",
@@ -118,7 +119,7 @@ export default function Footer() {
               e.currentTarget.style.color = "rgba(255,255,255,0.7)";
             }}
           >
-            <Mail size={16} /> hello@example.com
+            <Mail size={16} /> abiolad267@gmail.com
           </a>
         </div>
       </div>

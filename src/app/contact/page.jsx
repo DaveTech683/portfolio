@@ -40,8 +40,8 @@ const contactLinks = [
   {
     icon: FaLinkedin,
     label: "LinkedIn",
-    value: "www.linkedin.com/in/abiola-david-2b5319252",
-    href: "https://www.linkedin.com/in/abiola-david-2b5319252",
+    value: "www.linkedin.com/in/abiola-david-2b5319252/in/abiola-david-2b5319252",
+    href: "https://www.linkedin.com/in/abiola-david-2b5319252/in/abiola-david-2b5319252",
     color: "#0A66C2",
   },
   {

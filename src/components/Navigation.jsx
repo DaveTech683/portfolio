@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Command } from "lucide-react";
+import ThemeToggle from "./theme-toggle";
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -32,11 +33,11 @@ export default function Navigation({ onCommandPalette }) {
     <nav
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
       style={{
-        background: scrolled ? "rgba(11,13,18,.85)" : "transparent",
+        background: scrolled ? "var(--color-nav-overlay)" : "transparent",
         backdropFilter: scrolled ? "blur(20px)" : "none",
         WebkitBackdropFilter: scrolled ? "blur(20px)" : "none",
         borderBottom: scrolled
-          ? "1px solid rgba(255,255,255,.06)"
+          ? "1px solid var(--color-nav-border)"
           : "1px solid transparent",
       }}
     >
@@ -53,7 +54,10 @@ export default function Navigation({ onCommandPalette }) {
             Dv
           </div>
 
-          <span className="hidden sm:block text-white font-semibold text-sm">
+          <span
+            className="hidden sm:block font-semibold text-sm"
+            style={{ color: "var(--color-text-hi)" }}
+          >
             Portfolio
           </span>
         </Link>
@@ -72,29 +76,29 @@ export default function Navigation({ onCommandPalette }) {
                 className="relative px-3 py-2 rounded-md text-sm transition-all duration-300"
                 style={{
                   color: active
-                    ? "#fff"
-                    : "rgba(255,255,255,.6)",
+                    ? "var(--color-text-hi)"
+                    : "var(--color-text-mid)",
 
                   background: active
-                    ? "rgba(79,142,247,.12)"
+                    ? "var(--color-accent-dim)"
                     : "transparent",
 
                   border: active
-                    ? "1px solid rgba(79,142,247,.25)"
+                    ? "1px solid color-mix(in srgb, var(--color-accent) 25%, transparent)"
                     : "1px solid transparent",
                 }}
                 onMouseEnter={(e) => {
                   if (!active) {
                     e.currentTarget.style.background =
-                      "rgba(255,255,255,.06)";
-                    e.currentTarget.style.color = "#fff";
+                      "var(--color-surface-hover)";
+                    e.currentTarget.style.color = "var(--color-text-hi)";
                   }
                 }}
                 onMouseLeave={(e) => {
                   if (!active) {
                     e.currentTarget.style.background = "transparent";
                     e.currentTarget.style.color =
-                      "rgba(255,255,255,.6)";
+                      "var(--color-text-mid)";
                   }
                 }}
               >
@@ -125,9 +129,9 @@ export default function Navigation({ onCommandPalette }) {
             onClick={() => onCommandPalette?.()}
             className="hidden md:flex items-center gap-2 px-3 py-2 rounded-lg text-xs"
             style={{
-              color: "rgba(255,255,255,.45)",
-              background: "rgba(255,255,255,.04)",
-              border: "1px solid rgba(255,255,255,.08)",
+              color: "var(--color-text-low)",
+              background: "var(--color-surface)",
+              border: "1px solid var(--color-border)",
             }}
           >
             <Command size={13} />
@@ -145,8 +149,11 @@ export default function Navigation({ onCommandPalette }) {
             Resume
           </Link>
 
+          <ThemeToggle />
+
           <button
-            className="md:hidden p-2 rounded-lg text-white"
+            className="md:hidden p-2 rounded-lg"
+            style={{ color: "var(--color-text-hi)" }}
             onClick={() => setMobileOpen((prev) => !prev)}
           >
             {mobileOpen ? <X size={22} /> : <Menu size={22} />}
@@ -160,14 +167,14 @@ export default function Navigation({ onCommandPalette }) {
         className="md:hidden overflow-hidden transition-all duration-300"
         style={{
           maxHeight: mobileOpen ? "500px" : "0px",
-          background: "rgba(11,13,18,.96)",
+          background: "var(--color-nav-overlay-strong)",
           backdropFilter: "blur(20px)",
         }}
       >
         <div
           className="px-6 py-4 space-y-2"
           style={{
-            borderTop: "1px solid rgba(255,255,255,.08)",
+            borderTop: "1px solid var(--color-border)",
           }}
         >
           {navLinks.map((link) => {
@@ -181,9 +188,9 @@ export default function Navigation({ onCommandPalette }) {
                 onClick={() => setMobileOpen(false)}
                 className="block px-3 py-3 rounded-lg text-sm transition-all"
                 style={{
-                  color: active ? "#fff" : "rgba(255,255,255,.7)",
+                  color: active ? "var(--color-text-hi)" : "var(--color-text-mid)",
                   background: active
-                    ? "rgba(79,142,247,.12)"
+                    ? "var(--color-accent-dim)"
                     : "transparent",
                 }}
               >

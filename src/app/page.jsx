@@ -14,9 +14,9 @@ import EngineeringConsole from "../components/EngineeringConsole";
  * blurred orb backgrounds, no oversized animated counters.
  *
  * Fonts (add to your root layout / _document, or via next/font):
- *   Newsreader   — display serif, headlines only
- *   Inter        — body copy
- *   IBM Plex Mono — labels, meta, code, tags — the connective thread
+ *   Newsreader  , display serif, headlines only
+ *   Inter       , body copy
+ *   IBM Plex Mono, labels, meta, code, tags, the connective thread
  *                   back to the console panel in the hero
  */
 const COLOR = {
@@ -43,7 +43,7 @@ const FONT = {
 const capabilities = [
   {
     label: "Full-Stack Development",
-    desc: "Applications built end to end — schema through interface — by one person who owns the whole seam.",
+    desc: "Applications built end to end, schema through interface by one person who owns the whole seam.",
   },
   {
     label: "Backend & Infrastructure",
@@ -55,7 +55,7 @@ const capabilities = [
   },
   {
     label: "Product Engineering",
-    desc: "Scoping, sequencing, and shipping — the parts of building a product that aren't just writing code.",
+    desc: "Scoping, sequencing, and shipping, the parts of building a product that aren't just writing code.",
   },
 ];
 
@@ -151,7 +151,7 @@ export default function HomePage() {
                 className="w-1.5 h-1.5 rounded-full"
                 style={{ background: COLOR.warm }}
               />
-              David — Software Engineer
+              David, Software Engineer
             </p>
 
             <h1
@@ -176,7 +176,7 @@ export default function HomePage() {
             >
               Full-stack engineer and product builder. I take systems from
               database schema to shipped interface, and I stay through the
-              unglamorous parts — the ones that decide whether it actually
+              unglamorous parts, the ones that decide whether it actually
               works in production.
             </p>
 
@@ -207,7 +207,7 @@ export default function HomePage() {
               style={{ fontFamily: FONT.mono, color: COLOR.textLow }}
             >
               <a
-                href="https://github.com"
+                href="https://github.com/DaveTech683"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="quiet-link flex items-center gap-1.5"
@@ -215,7 +215,7 @@ export default function HomePage() {
                 <FaGithub size={14} /> GitHub
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/abiola-david-2b5319252"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="quiet-link flex items-center gap-1.5"
@@ -223,7 +223,7 @@ export default function HomePage() {
                 <FaLinkedin size={14} /> LinkedIn
               </a>
               <span style={{ color: COLOR.border }}>/</span>
-              <span>Lagos, Nigeria — remote</span>
+              <span>Lagos, Nigeria - remote</span>
             </div>
           </div>
 
@@ -472,7 +472,7 @@ export default function HomePage() {
               A streaming platform for independent filmmakers, built from
               scratch: producer portal, an automated transcoding pipeline,
               an operations dashboard, and the viewer experience on top of
-              it — designed and engineered end to end.
+              it, designed and engineered end to end.
             </p>
             <ul className="space-y-2.5 mb-8">
               {[
@@ -512,7 +512,7 @@ export default function HomePage() {
             </div>
           </Reveal>
 
-          {/* static window chrome — echoes the hero console without repeating its motion */}
+          {/* static window chrome, echoes the hero console without repeating its motion */}
           <Reveal className="md:col-span-6" delay={0.1}>
             <div
               className="rounded-lg overflow-hidden"
