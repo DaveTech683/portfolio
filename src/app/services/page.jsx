@@ -52,7 +52,6 @@ const services = [
       "Deployment to production",
       "README and architecture docs",
     ],
-    timeline: "4–12 weeks",
     bestFor: "Startups, MVPs, and product companies needing end-to-end build",
   },
   {
@@ -74,7 +73,6 @@ const services = [
       "Auth system",
       "API documentation",
     ],
-    timeline: "2–8 weeks",
     bestFor:
       "Products that need a solid backend foundation or existing apps that need a stronger API layer",
   },
@@ -97,7 +95,6 @@ const services = [
       "App store assets",
       "Push notification setup",
     ],
-    timeline: "6–14 weeks",
     bestFor:
       "Businesses that need a mobile presence without building two separate native apps",
   },
@@ -120,7 +117,6 @@ const services = [
       "Iteration roadmap",
       "Technical debt assessment",
     ],
-    timeline: "3–6 weeks",
     bestFor:
       "Early-stage founders who need to validate a product idea without burning months of runway",
   },
@@ -143,7 +139,6 @@ const services = [
       "Monitoring dashboard",
       "Recommendations doc",
     ],
-    timeline: "1–3 weeks",
     bestFor:
       "Teams with existing apps that are underperforming or failing Core Web Vitals",
   },
@@ -165,7 +160,6 @@ const services = [
       "Risk analysis",
       "1 hour follow-up call",
     ],
-    timeline: "1–2 weeks",
     bestFor:
       "CTOs and tech leads who need a second opinion on technical decisions",
   },
@@ -266,12 +260,12 @@ export default function ServicesPage() {
                   <span
                     className="text-xs px-2.5 py-1 rounded-full"
                     style={{
-                      background: "rgba(255,255,255,0.05)",
-                      color: "rgba(255,255,255,0.4)",
+                      background: "rgba(228, 236, 227, 0.3)",
+                      color: "rgba(50, 236, 13, 0.4)",
                       border: "1px solid rgba(255,255,255,0.08)",
                     }}
                   >
-                    {svc.timeline}
+                    
                   </span>
                 </div>
 

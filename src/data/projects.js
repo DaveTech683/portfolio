@@ -7,7 +7,7 @@ export const projects = [
     title: "Modest Daily Fashion",
     tagline: "A full-stack e-commerce platform for a modest-fashion retail brand.",
     category: "Startup / E-Commerce",
-    year: "2024–Present",
+    year: "2023 - Present",
     role: "Project Manager & Team Lead (Full Stack)",
     status: "Active",
     featured: true,
@@ -330,6 +330,7 @@ export const projects = [
       "Node.js",
       "Docker",
       "Redis",
+      "FastAPI",
       "PostgreSQL",
     ],
     overview:
@@ -377,7 +378,7 @@ export const projects = [
     color: "#F59E0B",
     gradient: "from-amber-500 via-orange-500 to-red-600",
     thumbnail: null,
-    tech: ["Next.js", "React", "PostgreSQL", "Tailwind CSS", "Node.js"],
+    tech: ["Next.js", "React", "FastAPI", "PostgreSQL", "Tailwind CSS", "Node.js"],
     overview:
       "A powerful internal admin dashboard for the GoPremiere team to review, approve, reject, and manage all submitted films. Full content moderation, statistics, and producer management capabilities.",
     problem:

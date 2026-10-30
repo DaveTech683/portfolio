@@ -280,13 +280,14 @@ export default function ResumePage() {
                   Full resume with all experience and education details
                 </p>
               </div>
-              <button
+              <a
+                href="/David-Shodeinde-CV.pdf"
+                download="David-Shodeinde-CV.pdf"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-200"
                 style={{
                   background: "linear-gradient(135deg, #4F8EF7, #7C3AED)",
                   color: "#fff",
                 }}
-                onClick={() => alert("CV download would be available here")}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = "translateY(-1px)";
                 }}
@@ -295,7 +296,7 @@ export default function ResumePage() {
                 }}
               >
                 <Download size={16} /> Download CV
-              </button>
+              </a>
             </div>
 
             {/* Skills */}
